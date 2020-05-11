@@ -38,16 +38,18 @@ module.exports = function (app) {
             {_id: req.params.id}, 
             { $push: { exercises: req.body } }, 
             { new: true })
-            .then(dbWorkout => {
-                res.json(dbWorkout);
+            .then(result => {
+                res.json(result);
             })
             .catch(err => {
                 res.json(err);
             });
     })
 
-    app.post("/api/workouts/", function(req,res) {
-        db.Workout.create(req.body)
+    app.post("/api/workouts", function(req,res) {
+        console.log("create workout")
+        // const workout = new db.Workout(body)
+        db.Workout.create({})
         .then(result => {
             console.log(result)
             res.json(result)
@@ -58,9 +60,9 @@ module.exports = function (app) {
 
     app.get("/api/workouts/range", function(req,res) {
         db.Workout.find({})
-        .then(result => {
-            console.log(result)
-            res.json(result)
+        .then(data => {
+            console.log(data)
+            res.json(data)
         })
         .catch(err => {
             res.json(err);

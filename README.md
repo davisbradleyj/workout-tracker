@@ -53,7 +53,7 @@ With regards to the technology learning points, we put into practice our ability
 
 ## Contributing
 
-Jerome Chenette, Kerwin Hy, Mahi Gunasekaran, Stephon Autery, Dan Fellows, Sam Poppe, Brad Davis
+Jerome Chenette, Kerwin Hy, Mahi Gunasekaran, Nadine Bundschuh, Ana Medrano, Sam Poppe
 
 ## Installation
 
@@ -61,7 +61,7 @@ To install necessary dependencies for this application, the following commands a
 
 `npm init` - To create the package.json file.
 
-`npm i express mysql2 sequelize passport passport-local unirest` - Adds node modules and populates the package-lock.json file.
+`npm i express mongoose morgan` - Adds node modules and populates the package-lock.json file.
 
 For those who wish to clone or fork this repo, the following steps should be followed:
 
@@ -87,18 +87,6 @@ No tests were required for this application
 ## Questions
 
 If you have any questions about the repository, open an issue or contact:
-
-<img src="https://avatars1.githubusercontent.com/u/57854409?v=4" alt="avatar" style="border-radius: 16px" width="30">
-
-[Stephon Autrey](https://github.com/stephonautery) directly at stephon@stephonautery.com
-
-<img src="https://avatars2.githubusercontent.com/u/57814329?v=4" alt="avatar" style="border-radius: 16px" width="30">
-
-[Dan Fellows](https://github.com/dfel08) directly at dfellows68@gmail.com
-
-<img src="https://avatars3.githubusercontent.com/u/60407759?v=4" alt="avatar" style="border-radius: 16px" width="30">
-
-[Sam Poppe](https://github.com/popsizzle) directly at poppe.samuel@gmail.com
 
 <img src="https://avatars3.githubusercontent.com/u/61176147?v=4" alt="avatar" style="border-radius: 16px" width="30">
 
