@@ -3,8 +3,9 @@ const Schema = mongoose.Schema;
 
 // per seeds.js, day (is Date) and exercises, with specifics for each (controlled by type and name for each)
 const WorkoutSchema = new Schema({
-    day: Date,
-    exercises: [{
+    day: {
+        type: Date, default: Date.now()},
+    exercises: {
         type: {
             type: String,
             required: "Required"
@@ -18,7 +19,7 @@ const WorkoutSchema = new Schema({
         weight: {type: Number},
         sets: {type: Number},
         reps: {type: Number}
-    }]
+    }
 });
 const Workout = mongoose.model("Workout", WorkoutSchema);
 module.exports = Workout;
