@@ -30,7 +30,7 @@ module.exports = function (app) {
                 res.json(err);
             });  
     })
-
+    // route to add an exercise to an existing workout (or for a newly created workout)
     app.put("/api/workouts/:id", function (req, res) {
         console.log("update exercise list item")
         // db.Workout.create(req.body)
@@ -46,6 +46,7 @@ module.exports = function (app) {
             });
     })
 
+    // route to create a new workout from the index page
     app.post("/api/workouts", function(req,res) {
         console.log("create workout")
         // const workout = new db.Workout(body)
@@ -58,6 +59,7 @@ module.exports = function (app) {
         });
     });
 
+    // route to display statistics for past workout
     app.get("/api/workouts/range", function(req,res) {
         db.Workout.find({})
         .then(data => {

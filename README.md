@@ -31,8 +31,8 @@ Having been given some starter code for the front-end (html, css, js) along with
 - jQuery - library supplement to JavaScript controlling application logic
 - Node.js - runtime environment which executes the JS code
 - Express - framework for Node.js to create a server
-- MongoDB -
-- Mongoose - 
+- MongoDB - a document oriented, NoSQL database
+- Mongoose - an object data modeling library for MongoDB and Node.js
 - Git - version control system to track changes to source code
 - GitHub - hosts repository that can be deployed to GitHub Pages
 - Heroku - host for deployed application
@@ -43,13 +43,7 @@ Having been given some starter code for the front-end (html, css, js) along with
 
 ## Learning-Points
 
-As this was the first time working as a team, most of ou key learning points related to how to co-exist in a team.  Our strengths included:
-- Communicating changes to code, and working together to ensure updates get into the code
-- Setting reasonable expectations for goals
-- Pivoting quickly with good pacing of development/programming worknot losing time
-- Distribution of work / Willingness to pair program and assist when teammates are stuck
-
-With regards to the technology learning points, we put into practice our ability to research and implement data from RapidAPI and the TrailRunProject Data API, and using Google Maps to help represent some of this returned data.  This was also a learning experience for each of our team in the practical application of Passport.js to control authentication and access to secure areas of our application. 
+This project provided a chance to refine my ability to develop routes linking server-side data with client-side activity.  It also allowed for a chance to explore more of what is possible with MongoDB and Mongoose, and work with a Non-relational database, where my previous professional experience (and class experience) included exposure to SQL/relational databases.
 
 ## Contributing
 
