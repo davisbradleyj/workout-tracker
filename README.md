@@ -1,6 +1,6 @@
-# workout-tracker
+# Workout Tracker
 
-[<img src="https://img.shields.io/badge/License-MIT-blue.svg">](https://opensource.org/licenses/MIT) [<img src="https://img.shields.io/badge/_ES_-_6_-green.svg">](https://tc39.es/ecma262/) [<img src=https://img.shields.io/badge/_JavaScript_-_ECMA6_-green.svg>](https://developer.mozilla.org/en-US/docs/Web/JavaScript) [<img src=https://img.shields.io/badge/_MySQL_-2.18.1_-orange.svg>](https://www.npmjs.com/package/mysql) [<img src=https://img.shields.io/badge/_Express_-_4.16.4-pink.svg>](https://www.npmjs.com/package/fs-extra)
+[<img src="https://img.shields.io/badge/License-MIT-blue.svg">](https://opensource.org/licenses/MIT) 
 
 ## Description
 
@@ -39,7 +39,19 @@ Having been given some starter code for the front-end (html, css, js) along with
 
 ## Summary
 
+While there were some relatively straightforward aspects of this project, such as creating the models and forming the routes, there were some unforseen, and unexpected complexities along the way.  Not to wax poetic, but such is life.  I'll dispense with highlighting the model data in workout.js with the expection of the calculation of totalDuration.  totalDuration is an element that appears in the /public/js/workout.js file, and is the accumulation of the minutes spent performing all exercises of a workout.  The code snipped below was introduced by Juliet George to some members of our cohort after the day's session on 5/11/2020.  She indicated that key elements were the virtual(s) and reduce methods, and that further research would be necessaary to understand how they function to calculate the total duration for the missing index page field.  In order to incorporate this information, it would need to be added to the WorkoutSchema in that model: `{ toJSON: { virtuals: true}}`
 
+../models/workout.js
+```
+WorkoutSchema.virtual("totalDuration").get(function(){
+   return this.exercises.reduce((total, exercise) => {
+        return total + exercise.duration;},0) 
+})
+```
+
+Most of the remaining code is relatively straightforward with regards to the creation of the routes required to get, post, and put routes specified elsewhere in the code provided.  Any roadblocks were a result of assorted typos. Because of course there are always typos that block a code from working.
+
+<img src="https://github.com/davisbradleyj/workout-tracker/blob/master/workout_tracker.gif>
 
 ## Learning-Points
 
@@ -47,7 +59,7 @@ This project provided a chance to refine my ability to develop routes linking se
 
 ## Contributing
 
-Jerome Chenette, Kerwin Hy, Mahi Gunasekaran, Nadine Bundschuh, Ana Medrano, Sam Poppe
+Jerome Chenette, Kerwin Hy, Mahi Gunasekaran, Nadine Bundschuh, Ana Medrano, Sam Poppe, Juliet George
 
 ## Installation
 
@@ -65,7 +77,7 @@ Clone:
 3) To clone the repository using HTTPS, under "Clone with HTTPS", click the clipboard icon. To clone the repository using an SSH key, including a certificate issued by your organization's SSH certificate authority, click Use SSH, then click the clipboard icon.
 4) Open your local Terminal
 5) Move into the directory location where you would like the cloned repo to sit.
-6) Type `git clone` then paste the URL copied from earlier so that your would see the following - `$ git clone https://github.com/davisbradleyj/ucb-batman.git`
+6) Type `git clone` then paste the URL copied from earlier so that your would see the following - `$ git clone https://github.com/davisbradleyj/workout-tracker.git`
 7) Press enter
 
 Fork:
