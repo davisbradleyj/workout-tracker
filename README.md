@@ -51,7 +51,7 @@ WorkoutSchema.virtual("totalDuration").get(function(){
 
 Most of the remaining code is relatively straightforward with regards to the creation of the routes required to get, post, and put routes specified elsewhere in the code provided.  Any roadblocks were a result of assorted typos. Because of course there are always typos that block a code from working.
 
-<img src="https://github.com/davisbradleyj/workout-tracker/blob/master/workout_tracker.gif>
+<img src="https://github.com/davisbradleyj/workout-tracker/blob/master/workout_tracker.gif">
 
 ## Learning-Points
 
